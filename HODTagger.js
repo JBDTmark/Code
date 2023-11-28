@@ -64,14 +64,12 @@ const sensitivityMapping = {
   function tagHomeownerData(homeowner) {
     const taggedHomeowner = {};
     for (const key in homeowner) {
-      if (sensitivityMapping[key]) {
-        // If the field exists in the mapping, create a new key with the tag
-        const newKey = sensitivityMapping[key];
-        taggedHomeowner[newKey] = homeowner[key];
-      } else {
-        // If the field is not in the mapping, copy it as is
-        taggedHomeowner[key] = homeowner[key];
-      }
+      // Use the full tag from the mapping, or default to 'personal:lsi'
+      const tag = sensitivityMapping[key] || 'personal:lsi';
+      taggedHomeowner[key] = {
+        value: homeowner[key],
+        tag: tag
+      };
     }
     return taggedHomeowner;
   }

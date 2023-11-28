@@ -1,4 +1,4 @@
-const filePath = '/Users/mark/Downloads/MSC/SystemSecurity/Coursework/Code/homeowners.json';
+const filePath = '/Users/mark/Downloads/MSC/SystemSecurity/Coursework/Code/taggedhomeowners.json';
 const outputPath = '/Users/mark/Downloads/MSC/SystemSecurity/Coursework/Code/keywords.json';
 
 const fs = require('fs');
