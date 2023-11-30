@@ -85,7 +85,7 @@ function createNewDatawarehouse() {
         console.error("error to write in file:", err);
         return;
       }
-      console.log('house data has stored in homeowner-h.json');
+      console.log('House data has stored in homeowner-h.json');
     });
 
     fs.writeFile(outputFilePath4, JSON.stringify(demographicData, null, 2), err => {
@@ -93,7 +93,7 @@ function createNewDatawarehouse() {
         console.error("error to write in file:", err);
         return;
       }
-      console.log('demogrphic data has stored in homeowner-m-a-d.json');
+      console.log('Demogrphic and medical and address data has stored in homeowner-m-a-d.json');
     });
 
     fs.writeFile(outputFilePath3, JSON.stringify(financialData, null, 2), err => {
@@ -101,7 +101,7 @@ function createNewDatawarehouse() {
         console.error("error to write in file:", err);
         return;
       }
-      console.log('financial data has stored in homeowner-f-f.json');
+      console.log('Financial and fullname data has stored in homeowner-f-f.json');
     });
   });
 }
